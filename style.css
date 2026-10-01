@@ -5,7 +5,7 @@
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color: #0d2234;
   color: #fff;
 }
@@ -31,18 +31,22 @@ header::after {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
 }
 
 h3 {
+  font-family: 'Anton', sans-serif;
   font-size: 1.2rem;
+  color: #333;
 }
 
 p {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
 }
 
@@ -81,17 +85,16 @@ button {
 
 .getStarted-card {
   background-color: #ffffff;
-  color: #fff;
   padding: 1rem;
   text-decoration: none;
   border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 100%;
 }
 
 .getStarted-card:hover {
-  background-color: #f0f0f0;
-  color: #333;
-
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 .card-image {
