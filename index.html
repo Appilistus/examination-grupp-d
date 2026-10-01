@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
   <script src="script.js" defer></script>
@@ -31,32 +34,44 @@
 
   <section class="getStarted">
     <h2>Kom igång</h2>
-    <div class="getStarted-cards">
-      <img class="card-image"src="/assets/lifting.jpg" alt="Weightlifting" class="getStarted-card">
-      <h3>Tips för dig som vill komma igång med träningen</h3>
-    </div>
-    <div class="getStarted-cards">
-      <img class="card-image" src="/assets/runners.jpg" alt="Running" class="getStarted-card">
-      <h3>Ny på gymmet? Kom igång på 1-2-3!</h3>
-    </div>
-    <div class="getStarted-cards">
-      <img class="card-image"src="/assets/app.jpg" alt="Mobile App" class="getStarted-card">
-      <h3>Appen är din träningsassistent i fickan</h3>
-    </div>
-    <div class="getStarted-cards">
-      <img class="card-image"src="/assets/maps.jpg" alt="Running" class="getStarted-card">
-      <h3>Hitta ditt närmaste gym</h3>
+    <div class="cards">
+      <div class="getStarted-card">
+        <img class="card-image"src="/assets/lifting.jpg" alt="Weightlifting" class="getStarted-card">
+        <h3>Tips för dig som vill komma igång med träningen</h3>
+      </div>
+      <div class="getStarted-card">
+        <img class="card-image" src="/assets/runners.jpg" alt="Running" class="getStarted-card">
+        <h3>Ny på gymmet? Kom igång på 1-2-3!</h3>
+      </div>
+      <div class="getStarted-card">
+        <img class="card-image"src="/assets/app.jpg" alt="Mobile App" class="getStarted-card">
+        <h3>Appen är din träningsassistent i fickan</h3>
+      </div>
+      <div class="getStarted-card">
+        <img class="card-image"src="/assets/maps.jpg" alt="Running" class="getStarted-card">
+        <h3>Hitta ditt närmaste gym</h3>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Bjuda in vänner</h2>
-    <img class="invite-image" src="/assets/friends.jpg" alt="Invite Friends" class="invite-image">
-  </section>
-
-  <section>
-    <h2>Blog</h2>
-    <img class="blog-image" src="/assets/running.jpg" alt="Blog" class="blog-image">
+  <section class="content-section">
+    <div class="content-card">
+      <img class="content-image" src="/assets/friends.jpg" alt="Invite Friends" class="invite-image">
+      <div class="content-text">
+        <h2>Bjuda in vänner</h2>
+        <p>Träna tillsammans med vänner och håll varandra motiverade. Bjud in dina vänner till appen och skapa träningsgrupper för att dela framsteg och utmaningar.</p>
+        <button>Bjuda in vänner</button>
+      </div>
+    </div>
+    
+    <div class="content-card content-card--reverse">
+      <img class="content-image" src="/assets/running.jpg" alt="Blog" class="blog-image">
+      <div class="content-text">
+        <h2>Blogg</h2>
+        <p>Håll dig uppdaterad med de senaste nyheterna, tipsen och trenderna inom träning och hälsa. Vår blogg erbjuder inspirerande artiklar och guider för att hjälpa dig att nå dina mål.</p>
+        <button>Läs mer</button>
+      </div>
+    </div>
   </section>
 
   <!-- profil -->
