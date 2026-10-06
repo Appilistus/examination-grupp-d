@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
-  <script src="script.js" defer></script>
+<script src="app.js" defer></script>
 </head>
 <body>
   <!-- login -->
@@ -16,6 +16,10 @@
 
   <!-- profil -->
 
+  <main>
+
+
+<h1>PERSON-UPPGIFTER</h1>  
 <label for="Förnamn">Förnamn</label>
 <input type="text" id="Förnamn" name="Förnamn" required>
 <p>
@@ -28,40 +32,33 @@
 
 
 
-</p>
-<label for="Email" id="Email" >Email</label>
-<input type="email" id="Email" name="Email" required>
+<label for="Email">Email</label><input type="text" id="Email" name="Email" required>
 
-
-
-
+<label for="Stad">Stad</label>
+<input type="text" id="Stad" name="Stad"> 
 
 <fieldset>
-  <legend>Födelsedatum</legend>
-  <label for="date"></label>
-  <input date="2026-10" type="date" id="date" name="date" required>
+  <legend>Övrigt</legend>
+  <label for="date"> Födelsedatum</label>
+  <input type="date" id="date" name="date" required>
 
 <p>
 
 
 </p>
 
-<legend>Kön</legend>
+<h2>Kön</h2>
+
     <input type="radio" id="man" name="kon" value="man" />
-    <label for="man">Man</label>
+    <label id ="label-man"for="man">Man</label>
     <input type="radio" id="kvinna" name="kon" value="kvinna" />
-    <label for="kvinna">Kvinna</label>
+    <label id ="label-kvinna" for="kvinna">Kvinna</label>
 
 </fieldset>
+<button type="button" id="saveBtn" onclick="saveData()">Spara</button>
+<button type="button" id="clearBtn" onclick="clearForm()">Rensa info</button>
 
-
-
-
-
-
-
-<link rel="stylesheet" href="style.css">
-
+</main>
 
 </body>
 </html>
