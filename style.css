@@ -1,8 +1,58 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+#profile {
+    color: white;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOR49q3NR6YEnabTJMO6JbCOMLUEjUYmS72MFHHOO0wQ&s=10");
+    background-size: cover;
+    background-position: center;
+}
+
+main{
+    background-color: white;
+max-width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+     font-weight: bold;
+}
+
+h4{
+    text-align: center;
+}
+
+fieldset{
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+legend{
+    text-align: center;
+   
+}
+h5{
+    text-align: center;
+    font-size: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+#label-man{
+    display: inline-block;
+    margin-right: 10px;
+}
+#label-kvinna{ 
+    display: inline-block;
+    margin-right: 10px;
+}
+
 
 body{
   font-family: 'Quicksand', sans-serif;

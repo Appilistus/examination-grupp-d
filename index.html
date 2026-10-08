@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
-  <script src="script.js" defer></script>
+<script src="script.js" defer></script>
 </head>
 <body>
   <!-- navbar -->
@@ -75,8 +75,49 @@
   </section>
 
   <!-- profil -->
+  
+  <main id="profile">
+
+<h4>PERSON-UPPGIFTER</h4>
+<label for="Förnamn">Förnamn</label>
+<input type="text" id="Förnamn" name="Förnamn" required>
+<p>
+<p>
+<p>
+<p>
+<label for="Efternamn">Efternamn</label>
+<input type="text" id="Efternamn" name="Efternamn"> 
+<p>
 
 
+
+<label for="Email">Email</label><input type="text" id="Email" name="Email" required>
+
+<label for="Stad">Stad</label>
+<input type="text" id="Stad" name="Stad"> 
+
+<fieldset>
+  <legend>Övrigt</legend>
+  <label for="date"> Födelsedatum</label>
+  <input type="date" id="date" name="date" required>
+
+<p>
+
+
+</p>
+
+<h5>Kön</h5>
+
+    <input type="radio" id="man" name="kon" value="man" />
+    <label id ="label-man"for="man">Man</label>
+    <input type="radio" id="kvinna" name="kon" value="kvinna" />
+    <label id ="label-kvinna" for="kvinna">Kvinna</label>
+
+</fieldset>
+<button type="button" id="saveBtn" onclick="saveData()">Spara</button>
+<button type="button" id="clearBtn" onclick="clearForm()">Rensa info</button>
+
+</main>
   <footer>
     <p>&copy; 2024 Fitness App. Alla rättigheter förbehållna.</p>
   </footer>
