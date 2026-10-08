@@ -5,11 +5,18 @@
   box-sizing: border-box;
 }
 
+#profile {
+    color: white;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOR49q3NR6YEnabTJMO6JbCOMLUEjUYmS72MFHHOO0wQ&s=10");
+    background-size: cover;
+    background-position: center;
+}
+
 main{
     background-color: white;
 max-width: 500px;
     margin: 0 auto;
-    padding: 100px;
+    padding: 50px;
      font-weight: bold;
 }
 
