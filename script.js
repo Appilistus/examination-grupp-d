@@ -36,3 +36,23 @@ if (savedKön) {
 }
 }
 loadData();
+
+const knapp = document.getElementById("profileBtn");
+const profileForm = document.getElementById("profile");
+
+knapp.addEventListener("click", (event) => {
+  profileForm.hidden = false;
+  dashboardSection.hidden = true;
+});
+
+const dashboardSection = document.getElementById("dashboard"); 
+const dashboardBtn = document.getElementById("dashboardBtn");
+
+dashboardBtn.addEventListener("click", (event) => {
+  dashboardSection.hidden = false;
+  profileForm.hidden = true; 
+});
+
+
+
+
