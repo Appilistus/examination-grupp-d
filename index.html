@@ -17,8 +17,8 @@
       <h1>Fitness App</h1>
     </div>
     <ul class="nav-links">
-      <li><a href="#dashboard">Dashboard</a></li>
-      <li><a href="#profile">Profil</a></li>
+      <li><button id="dashboardBtn">Dashboard</button></li>
+      <li><button id="profileBtn">Profil</button></li>
       <li><a href="#login">Login</a></li>
     </ul>
   </nav>
@@ -27,12 +27,13 @@
 
 
   <!-- dashboard -->
+   <section id="dashboard" hidden>
   <header>
     <h2>Välkommen</h2>
     <img class="hero-image"src="/assets/gym.jpg" alt="Gym" class="gym-image">
   </header>
 
-  <section class="getStarted">
+  <div class="getStarted">
     <h2>Kom igång</h2>
     <div class="cards">
       <div class="getStarted-card">
@@ -52,9 +53,9 @@
         <h3>Hitta ditt närmaste gym</h3>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="content-section">
+  <div class="content-section">
     <div class="content-card">
       <img class="content-image" src="/assets/friends.jpg" alt="Invite Friends" class="invite-image">
       <div class="content-text">
@@ -72,11 +73,11 @@
         <button>Läs mer</button>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   <!-- profil -->
   
-  <main id="profile">
+  <section id="profile" hidden> 
 
 <h4>PERSON-UPPGIFTER</h4>
 <label for="Förnamn">Förnamn</label>
@@ -117,7 +118,7 @@
 <button type="button" id="saveBtn" onclick="saveData()">Spara</button>
 <button type="button" id="clearBtn" onclick="clearForm()">Rensa info</button>
 
-</main>
+</section>
   <footer>
     <p>&copy; 2024 Fitness App. Alla rättigheter förbehållna.</p>
   </footer>
