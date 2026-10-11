@@ -11,6 +11,10 @@ body{
   color: #fff;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 main{
   background-color: white;
   max-width: 500px;
