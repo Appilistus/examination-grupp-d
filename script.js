@@ -35,4 +35,11 @@ if (savedKön) {
   }
 }
 }
+
+
+const savedName = localStorage.getItem("Förnamn");
+const welcomeName = document.getElementById("welcomeName");
+if (welcomeName && savedName) {
+  welcomeName.textContent = `Välkommen, ${savedName}!`;
+}
 loadData();
