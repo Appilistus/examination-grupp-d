@@ -93,6 +93,7 @@ button {
   border: none;
   border-radius: 50px;
   padding: 0.8rem 1.5rem;
+  margin: 1.2rem;
   cursor: pointer;
 }
 
@@ -112,6 +113,46 @@ footer {
   font-family: 'Anton', sans-serif;
   font-size: 1.5rem;
   color: #fff;
+}
+
+.login-section {
+  display: flex;
+  align-items: center;
+}
+
+.login-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+
+.login-image {
+  object-fit: cover;
+  width: 50%;
+  height: auto;
+  align-self: stretch;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2rem;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#email,
+#password {
+  width: 100%;
 }
 
 .hero-image {
@@ -305,6 +346,11 @@ label{
 }
 
 @media (max-width: 768px) {
+
+  .login-image {
+    display: none;
+  }
+
   .content-card,
   .content-card--reverse {
     display: flex;
