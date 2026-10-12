@@ -55,7 +55,7 @@
   <!-- dashboard -->
   <section id="dashboard">
   <header>
-    <h2>Välkommen</h2>
+    <h2>Välkommen <span id="welcome-name"></span></h2>
     <img class="hero-image"src="/assets/gym.jpg" alt="Gym" class="gym-image">
   </header>
 
@@ -107,7 +107,6 @@
   <section id="profile" hidden> 
     <h2>PERSON-UPPGIFTER</h2>
     <div class="profile-contents">
-      <div id="show-profile"></div>
       <div class="input-field">
         <fieldset>
           <div class="form-row">
@@ -146,8 +145,8 @@
     </div>
 
     <div class="buttons">
-      <button type="button" id="saveBtn" onclick="saveData()">Spara</button>
-      <button type="button" id="clearBtn" onclick="clearForm()">Rensa info</button>
+      <button type="button" id="saveBtn">Spara</button>
+      <button type="button" id="clearBtn"">Rensa info</button>
     </div>
     </section>
   
