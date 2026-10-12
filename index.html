@@ -17,22 +17,49 @@
       <h1>Fitness App</h1>
     </div>
     <ul class="nav-links">
-      <li><a href="#dashboard">Dashboard</a></li>
-      <li><a href="#profile">Profil</a></li>
+      <li><button id="dashboardBtn">Dashboard</button></li>
+      <li><button id="profileBtn">Profil</button></li>
       <li><a href="#login">Login</a></li>
     </ul>
   </nav>
 
-  <!-- login -->
+ 
+   <section id="login" class="login-section">
+
+  <div class="login-box">
+
+    <h2>Logga in</h2>
+
+    <form id="loginForm">
+
+      <label for="email">E-post</label>
+      <input type="email" id="email" placeholder="Din e-post" required>
+
+      <label for="password">Lösenord</label>
+      <input type="password" id="password" placeholder="Ditt lösenord" required>
+
+      <button type="submit">Logga in</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <button id="logoutButton" hidden>Logga ut</button>
+
+  </div>
+
+</section>
+
 
 
   <!-- dashboard -->
+  <section id="dashboard" hidden>
   <header>
     <h2>Välkommen <span id="welcome-name"></span></h2>
     <img class="hero-image"src="/assets/gym.jpg" alt="Gym" class="gym-image">
   </header>
 
-  <section class="getStarted">
+  <div class="getStarted">
     <h2>Kom igång</h2>
     <div class="cards">
       <div class="getStarted-card">
@@ -52,9 +79,9 @@
         <h3>Hitta ditt närmaste gym</h3>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="content-section">
+  <div class="content-section">
     <div class="content-card">
       <img class="content-image" src="/assets/friends.jpg" alt="Invite Friends" class="invite-image">
       <div class="content-text">
@@ -72,54 +99,60 @@
         <button>Läs mer</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- profil -->
   
-  <main id="profile">
+  <section id="profile" hidden> 
+    <h2>PERSON-UPPGIFTER</h2>
+    <div class="profile-contents">
+      <div id="show-profile"></div>
+      <div class="input-field">
+        <fieldset>
+          <div class="form-row">
+            <label for="Förnamn">Förnamn: </label>
+            <input type="text" id="Förnamn" name="Förnamn" required>
+          </div>
+          <div class="form-row">
+            <label for="Efternamn">Efternamn: </label>
+            <input type="text" id="Efternamn" name="Efternamn">
+          </div>
+          <div class="form-row">
+            <label for="Email">Email: </label>
+            <input type="text" id="Email" name="Email" required>
+          </div>
+          <div class="form-row">
+            <label for="Stad">Stad: </label>
+            <input type="text" id="Stad" name="Stad">
+          </div>
+          <div class="form-row">
+            <label for="date">Födelsedatum</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-row">
+            <label>Kön</label>
+            <div class="gender-row">
+              <input type="radio" id="man" name="kon" value="man" />
+              <label id="label-man" for="man">Man</label>
+            </div>
+            <div class="gender-row">
+              <input type="radio" id="kvinna" name="kon" value="kvinna" />
+              <label id="label-kvinna" for="kvinna">Kvinna</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
 
-<h4>PERSON-UPPGIFTER</h4>
-<label for="Förnamn">Förnamn</label>
-<input type="text" id="Förnamn" name="Förnamn" required>
-<p>
-<p>
-<p>
-<p>
-<label for="Efternamn">Efternamn</label>
-<input type="text" id="Efternamn" name="Efternamn"> 
-<p>
-
-
-
-<label for="Email">Email</label><input type="text" id="Email" name="Email" required>
-
-<label for="Stad">Stad</label>
-<input type="text" id="Stad" name="Stad"> 
-
-<fieldset>
-  <legend>Övrigt</legend>
-  <label for="date"> Födelsedatum</label>
-  <input type="date" id="date" name="date" required>
-
-<p>
-
-
-</p>
-
-<h5>Kön</h5>
-
-    <input type="radio" id="man" name="kon" value="man" />
-    <label id ="label-man"for="man">Man</label>
-    <input type="radio" id="kvinna" name="kon" value="kvinna" />
-    <label id ="label-kvinna" for="kvinna">Kvinna</label>
-
-</fieldset>
-<button type="button" id="saveBtn" onclick="saveData()">Spara</button>
-<button type="button" id="clearBtn" onclick="clearForm()">Rensa info</button>
-
-</main>
+    <div class="buttons">
+      <button type="button" id="saveBtn" onclick="saveData()">Spara</button>
+      <button type="button" id="clearBtn" onclick="clearForm()">Rensa info</button>
+    </div>
+    </section>
+  
   <footer>
-    <p>&copy; 2024 Fitness App. Alla rättigheter förbehållna.</p>
+    <p>&copy; 2026 Fitness App. Alla rättigheter förbehållna.</p>
   </footer>
 </body>
-</html>
+</html>  
