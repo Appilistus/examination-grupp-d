@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
-  <script src="script.js" defer></script>
+<script src="script.js" defer></script>
 </head>
 <body>
   <!-- navbar -->
@@ -17,8 +17,8 @@
       <h1>Fitness App</h1>
     </div>
     <ul class="nav-links">
-      <li><a href="#dashboard">Dashboard</a></li>
-      <li><a href="#profile">Profil</a></li>
+      <li><button id="dashboardBtn">Dashboard</button></li>
+      <li><button id="profileBtn">Profil</button></li>
       <li><a href="#login">Login</a></li>
     </ul>
   </nav>
@@ -53,12 +53,13 @@
 
 
   <!-- dashboard -->
+   <section id="dashboard">
   <header>
     <h2>Välkommen</h2>
     <img class="hero-image"src="/assets/gym.jpg" alt="Gym" class="gym-image">
   </header>
 
-  <section class="getStarted">
+  <div class="getStarted">
     <h2>Kom igång</h2>
     <div class="cards">
       <div class="getStarted-card">
@@ -78,9 +79,9 @@
         <h3>Hitta ditt närmaste gym</h3>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="content-section">
+  <div class="content-section">
     <div class="content-card">
       <img class="content-image" src="/assets/friends.jpg" alt="Invite Friends" class="invite-image">
       <div class="content-text">
@@ -98,13 +99,60 @@
         <button>Läs mer</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- profil -->
+  
+  <section id="profile" hidden> 
+    <h2>PERSON-UPPGIFTER</h2>
+    <div class="profile-contents">
+      <div class="show-profile"></div>
+      <div class="input-field">
+        <fieldset>
+          <div class="form-row">
+            <label for="Förnamn">Förnamn: </label>
+            <input type="text" id="Förnamn" name="Förnamn" required>
+          </div>
+          <div class="form-row">
+            <label for="Efternamn">Efternamn: </label>
+            <input type="text" id="Efternamn" name="Efternamn">
+          </div>
+          <div class="form-row">
+            <label for="Email">Email: </label>
+            <input type="text" id="Email" name="Email" required>
+          </div>
+          <div class="form-row">
+            <label for="Stad">Stad: </label>
+            <input type="text" id="Stad" name="Stad">
+          </div>
+          <div class="form-row">
+            <label for="date">Födelsedatum</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-row">
+            <label>Kön</label>
+            <div class="gender-row">
+              <input type="radio" id="man" name="kon" value="man" />
+              <label id="label-man" for="man">Man</label>
+            </div>
+            <div class="gender-row">
+              <input type="radio" id="kvinna" name="kon" value="kvinna" />
+              <label id="label-kvinna" for="kvinna">Kvinna</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
 
-
+    <div class="buttons">
+      <button type="button" id="saveBtn" onclick="saveData()">Spara</button>
+      <button type="button" id="clearBtn" onclick="clearForm()">Rensa info</button>
+    </div>
+    </section>
+  
   <footer>
-    <p>&copy; 2024 Fitness App. Alla rättigheter förbehållna.</p>
+    <p>&copy; 2026 Fitness App. Alla rättigheter förbehållna.</p>
   </footer>
 </body>
 </html>  

@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,18 @@ body{
   font-family: 'Quicksand', sans-serif;
   background-color: #0d2234;
   color: #fff;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+main{
+  background-color: white;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+  font-weight: bold;
 }
 
 nav {
@@ -65,7 +78,6 @@ h2 {
 h3 {
   font-family: 'Anton', sans-serif;
   font-size: 1.2rem;
-  color: #333;
 }
 
 p {
@@ -182,6 +194,116 @@ footer {
   background-repeat: no-repeat;
 }
 
+/* profile */
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOR49q3NR6YEnabTJMO6JbCOMLUEjUYmS72MFHHOO0wQ&s=10");
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-contents{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.show-profile,
+.input-field {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+input {
+  border: 1px solid #ddd;
+  padding: 14px 16px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  border: none;
+}
+
+legend{
+    text-align: center;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-row label{
+    flex: 0 0 140px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.form-row input{
+    flex: 1;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gender-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.gender-row input[type="radio"] {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.gender-row label {
+  margin-bottom: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#clearBtn {
+  background-color: #fff;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+#clearBtn:hover {
+  background-color: #dc3545;
+  color: #fff;
+  border: 1px solid #dc3545;
+}
+
 @media (max-width: 768px) {
   .content-card,
   .content-card--reverse {
@@ -192,5 +314,26 @@ footer {
 
   .content-image {
     width: 100%;
+  }
+
+  .profile-contents {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-row label {
+    flex: none;
+  }
+
+  .gender-row {
+    justify-content: flex-start;
+  }
+
+  .buttons {
+    flex-direction: column;
   }
 }
