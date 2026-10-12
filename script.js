@@ -54,5 +54,33 @@ dashboardBtn.addEventListener("click", (event) => {
 });
 
 
+const update = document.getElementById("saveBtn")
+const clear = document.getElementById("clearBtn")
+const showProfileInfo = document.getElementById("show-profile")
 
+function showProfile() {
+  const firstName = document.getElementById("Förnamn").value;
+  const lastName = document.getElementById("Efternamn").value;
+  const email = document.getElementById("Email").value;
+  const date = document.getElementById("date").value;
+  const city = document.getElementById("Stad").value;
+  const könRadio = document.querySelector('input[name="kon"]:checked');
+  const kön = könRadio ? könRadio.value : "";
 
+  showProfileInfo.innerHTML = `
+    <h3>${firstName} ${lastName}</h3>
+    <p>${email}</p>
+    <p>${date}</p>
+    <p>${city}</p>
+    <p>${kön}</p>
+  `;
+}
+
+function clearProfile() {
+  showProfileInfo.innerHTML = ""
+}
+
+update.addEventListener("click", showProfile);
+clear.addEventListener("click", clearProfile);
+
+showProfile();
