@@ -17,9 +17,9 @@
       <h1>Fitness App</h1>
     </div>
     <ul class="nav-links">
-      <li><button id="dashboardBtn">Dashboard</button></li>
-      <li><button id="profileBtn">Profil</button></li>
-      <li><a href="#login">Login</a></li>
+      <li><button id="dashboardBtn" hidden>Dashboard</button></li>
+      <li><button id="profileBtn" hidden>Profil</button></li>
+      <li><button id="login" hidden>Log ut</button></li>
     </ul>
   </nav>
 
@@ -28,16 +28,16 @@
     <div class="login-box">
       <div class="login-input">
         <h2>Logga in</h2>
-        
+
         <form id="loginForm">
-          
+
           <label for="email">E-post</label>
           <input type="email" id="email" placeholder="Din e-post" required>
-          
+
           <label for="password">Lösenord</label>
           <input type="password" id="password" placeholder="Ditt lösenord" required>
         </form>
-        
+
         <button type="submit">Logga in</button>
       </div>
       <img src="/assets/login.jpg" class="login-image" alt="login image"> 
