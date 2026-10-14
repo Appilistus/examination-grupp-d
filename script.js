@@ -90,6 +90,9 @@ const update = document.getElementById("saveBtn")
 const clear = document.getElementById("clearBtn")
 const showProfileInfo = document.getElementById("show-profile")
 
+update.addEventListener("click", showProfile);
+clear.addEventListener("click", clearProfile);
+
 function showProfile() {
   const firstName = document.getElementById("Förnamn").value;
   const lastName = document.getElementById("Efternamn").value;
@@ -122,7 +125,6 @@ clear.addEventListener("click", clearProfile);
 
 document.addEventListener("DOMContentLoaded", () => {
   loadData();
-  showProfile();
 });
 const loginForm = document.getElementById("loginForm");
 const emailInput = document.getElementById("email");
