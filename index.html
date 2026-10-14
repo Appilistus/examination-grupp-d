@@ -19,12 +19,12 @@
     <ul class="nav-links">
       <li><button id="dashboardBtn" hidden>Dashboard</button></li>
       <li><button id="profileBtn" hidden>Profil</button></li>
-      <li><button id="login" hidden>Log ut</button></li>
+      <li><button id="logoutButton" type="button" hidden>Log ut</button></li>
     </ul>
   </nav>
 
  
-  <section id="login" class="login-section">
+  <section id="loginSection" class="login-section">
     <div class="login-box">
       <div class="login-input">
         <h2>Logga in</h2>
@@ -36,9 +36,9 @@
 
           <label for="password">Lösenord</label>
           <input type="password" id="password" placeholder="Ditt lösenord" required>
+          <button type="submit">Logga in</button>
         </form>
-
-        <button type="submit">Logga in</button>
+        <p id="message" aria-live="polite"></p>
       </div>
       <img src="/assets/login.jpg" class="login-image" alt="login image"> 
     </div>
@@ -136,11 +136,12 @@
           </div>
         </fieldset>
       </div>
+      <div id="show-profile" class="show-profile"></div>
     </div>
 
     <div class="buttons">
       <button type="button" id="saveBtn">Spara</button>
-      <button type="button" id="clearBtn"">Rensa info</button>
+      <button type="button" id="clearBtn">Rensa info</button>
     </div>
     </section>
   
