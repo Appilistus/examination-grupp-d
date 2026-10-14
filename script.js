@@ -36,7 +36,10 @@ function clearForm() {
   document.getElementById("Email").value = "";
   document.getElementById("Stad").value = "";
   document.getElementById("date").value = "";
-  document.querySelector('input[name="kon"]:checked').checked = false;
+  const selectedKön = document.querySelector('input[name="kon"]:checked');
+  if (selectedKön) {
+    selectedKön.checked = false;
+  }
 }
 
 function loadData() {
@@ -65,10 +68,10 @@ const clearProfileButton = document.getElementById("clearBtn");
 clearProfileButton.addEventListener("click", clearForm);
 
 
-const knapp = document.getElementById("profileBtn");
+const profileBtn = document.getElementById("profileBtn");
 const profileForm = document.getElementById("profile");
 
-knapp.addEventListener("click", (event) => {
+profileBtn.addEventListener("click", (event) => {
   loadData();
   profileForm.hidden = false;
   dashboardSection.hidden = true;
@@ -96,17 +99,21 @@ function showProfile() {
   const könRadio = document.querySelector('input[name="kon"]:checked');
   const kön = könRadio ? könRadio.value : "";
 
-  showProfileInfo.innerHTML = `
-    <h3>${firstName} ${lastName}</h3>
-    <p>${email}</p>
-    <p>${date}</p>
-    <p>${city}</p>
-    <p>${kön}</p>
-  `;
+  showProfileInfo.replaceChildren();
+
+  const nameHeading = document.createElement("h3");
+  nameHeading.textContent = `${firstName} ${lastName}`.trim();
+  showProfileInfo.appendChild(nameHeading);
+
+  [email, date, city, kön].forEach((value) => {
+    const detail = document.createElement("p");
+    detail.textContent = value;
+    showProfileInfo.appendChild(detail);
+  });
 }
 
 function clearProfile() {
-  showProfileInfo.innerHTML = ""
+  showProfileInfo.replaceChildren();
 }
 
 update.addEventListener("click", showProfile);
@@ -117,4 +124,45 @@ document.addEventListener("DOMContentLoaded", () => {
   loadData();
   showProfile();
 });
+const loginForm = document.getElementById("loginForm");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const message = document.getElementById("message");
+const logoutButton = document.getElementById("logoutButton");
+const loginSection = document.getElementById("loginSection");
 
+loginForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+
+    if (email === "test@gmail.com" && password === "123456") {
+        message.textContent = "Du är nu inloggad!";
+        message.style.color = "green";
+
+        loginSection.hidden = true;
+        dashboardSection.hidden = false;
+        dashboardBtn.hidden = false;
+        profileBtn.hidden = false;
+        logoutButton.hidden = false;
+    } else {
+        message.textContent = "Fel e-post eller lösenord!";
+        message.style.color = "red";
+    }
+});
+
+logoutButton.addEventListener("click", function() {
+    loginSection.hidden = false;
+    dashboardSection.hidden = true;
+    profileForm.hidden = true;
+    dashboardBtn.hidden = true;
+    profileBtn.hidden = true;
+    logoutButton.hidden = true;
+
+    loginForm.reset();
+
+    message.textContent = "Du har loggat ut.";
+    message.style.color = "white";
+});

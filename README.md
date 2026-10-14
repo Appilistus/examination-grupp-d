@@ -6,9 +6,9 @@ En förenklad medlemsportal för gymmet Fitness App (fiktivt). Användaren "logg
 
 ## Demo-uppgifter
 
-| Användarnamn | Lösenord |
-|--------------|----------|
-| `demo`       | `demo`   |
+|   Användarnamn   |  Lösenord  |
+|------------------|------------|
+| `test@gmail.com` | `123456`   |
 
 ## Kom igång
 
@@ -59,6 +59,7 @@ Aktiv vy hanteras som ett litet tillstånd (en variabel + en funktion), inte med
 | **Asako** | Dashboard och styling (CSS, responsivitet, tillgänglighet) |
 | **Max** | Profilsidan (formulär, spara/läsa localStorage, uppdatera dashboard) |
 | **Humaira** | Login-sidan (formulär, validering mot hårdkodade uppgifter, felmeddelande, logga ut) |
+| **Adrian** | Login-funktion (Användar uppgifter sparas i profil och uppdaterar dashboard, e-post och lösenord fungerar för login) |
 
 ## Klart när (Definition of Done)
 
